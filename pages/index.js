@@ -1,8 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { animate } from "popmotion";
 
 export default function Home() {
+	animate({
+		from: 0,
+		to: 100,
+		onUpdate: (latest) => console.log(latest),
+	});
+
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -13,7 +20,7 @@ export default function Home() {
 
 			<main className={styles.main}>
 				<h1 className={styles.title}>
-					Animotion <a href="https://popmotion.io/">js 👋</a>
+					Popmotion <a href="https://popmotion.io/">js 👋</a>
 				</h1>
 
 				<p className={styles.description}>Comencemos</p>
